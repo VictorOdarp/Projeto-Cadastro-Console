@@ -1,0 +1,14 @@
+C:\Users\Victo\Desktop\Projeto Cadastro\ProjetoCadastro\ProjetoCadastro\bin\Debug\net7.0\ProjetoCadastro.exe
+C:\Users\Victo\Desktop\Projeto Cadastro\ProjetoCadastro\ProjetoCadastro\bin\Debug\net7.0\ProjetoCadastro.deps.json
+C:\Users\Victo\Desktop\Projeto Cadastro\ProjetoCadastro\ProjetoCadastro\bin\Debug\net7.0\ProjetoCadastro.runtimeconfig.json
+C:\Users\Victo\Desktop\Projeto Cadastro\ProjetoCadastro\ProjetoCadastro\bin\Debug\net7.0\ProjetoCadastro.dll
+C:\Users\Victo\Desktop\Projeto Cadastro\ProjetoCadastro\ProjetoCadastro\bin\Debug\net7.0\ProjetoCadastro.pdb
+C:\Users\Victo\Desktop\Projeto Cadastro\ProjetoCadastro\ProjetoCadastro\obj\Debug\net7.0\ProjetoCadastro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Victo\Desktop\Projeto Cadastro\ProjetoCadastro\ProjetoCadastro\obj\Debug\net7.0\ProjetoCadastro.AssemblyInfoInputs.cache
+C:\Users\Victo\Desktop\Projeto Cadastro\ProjetoCadastro\ProjetoCadastro\obj\Debug\net7.0\ProjetoCadastro.AssemblyInfo.cs
+C:\Users\Victo\Desktop\Projeto Cadastro\ProjetoCadastro\ProjetoCadastro\obj\Debug\net7.0\ProjetoCadastro.csproj.CoreCompileInputs.cache
+C:\Users\Victo\Desktop\Projeto Cadastro\ProjetoCadastro\ProjetoCadastro\obj\Debug\net7.0\ProjetoCadastro.dll
+C:\Users\Victo\Desktop\Projeto Cadastro\ProjetoCadastro\ProjetoCadastro\obj\Debug\net7.0\refint\ProjetoCadastro.dll
+C:\Users\Victo\Desktop\Projeto Cadastro\ProjetoCadastro\ProjetoCadastro\obj\Debug\net7.0\ProjetoCadastro.pdb
+C:\Users\Victo\Desktop\Projeto Cadastro\ProjetoCadastro\ProjetoCadastro\obj\Debug\net7.0\ProjetoCadastro.genruntimeconfig.cache
+C:\Users\Victo\Desktop\Projeto Cadastro\ProjetoCadastro\ProjetoCadastro\obj\Debug\net7.0\ref\ProjetoCadastro.dll
