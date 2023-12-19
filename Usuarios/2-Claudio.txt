@@ -1,4 +1,0 @@
-Name: Claudio
-Email: Claudio@gmail.com
-Year: 43
-Heigh: 1,88

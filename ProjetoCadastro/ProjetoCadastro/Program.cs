@@ -15,7 +15,7 @@ namespace ProjetoCadastro
             Console.WriteLine("Perguntas iniciais!");
             Console.WriteLine();
 
-            string path = @"C:\Users\Victo\Desktop\Projeto Cadastro\Formulario.txt";
+            string path = @"C:\Users\Meu Computador\Desktop\Teste\ProjetoCadastro-Console\Formulario.txt";
 
             try
             {
@@ -50,7 +50,6 @@ namespace ProjetoCadastro
                 int validação = int.Parse(Console.ReadLine());
                 Console.WriteLine();
 
-
                 if (validação == 1)
                 {
                     user.CadastrarUsuario(list);
@@ -59,6 +58,16 @@ namespace ProjetoCadastro
                 if (validação == 2)
                 {
                     user.ListarUsuárioName(list);
+                    Inicio(list,user);
+                }
+                if (validação == 3)
+                {
+                    user.AdicionarPergunta();
+                    Inicio(list,user);
+                }
+                if (validação == 4)
+                {
+                    user.RemoverPergunta();
                     Inicio(list,user);
                 }
             }

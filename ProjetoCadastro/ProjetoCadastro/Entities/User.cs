@@ -1,6 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Globalization;
+using System.IO;
+using System.Net.Http.Headers;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ProjetoCadastro.Entities
 {
@@ -40,7 +45,7 @@ namespace ProjetoCadastro.Entities
             User user = new User(name, email, year, height);
             list.Add(user);
 
-            string targetPath = (@"C:\Users\Victo\Desktop\Projeto Cadastro\Usuarios\" + count + "-" + user.Name + ".txt");
+            string targetPath = (@"C:\Users\Meu Computador\Desktop\Teste\ProjetoCadastro-Console\Usuarios\" + count + "-" + user.Name + ".txt");
 
             try
             {
@@ -76,6 +81,68 @@ namespace ProjetoCadastro.Entities
             {
                 Console.WriteLine(count + " - " + item.Name);
                 count++;
+            }
+            Console.WriteLine();
+        }
+
+        public void AdicionarPergunta()
+        {
+            string path = @"C:\Users\Meu Computador\Desktop\Teste\ProjetoCadastro-Console\formulario.txt";
+            string numero = null;
+
+            Console.Write("Digite sua pergunta a ser adicionada: ");
+            string pergunta = Console.ReadLine();
+
+            try
+            {
+                string[] lines = File.ReadAllLines(path);
+
+                using (StreamWriter sw = new StreamWriter(path, true))
+                {
+                    sw.WriteLine((lines.Count() + 1) + " - " + pergunta);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred");
+                Console.WriteLine(ex.Message);
+            }
+            Console.WriteLine();
+        }
+
+        public void RemoverPergunta()
+        {
+            string path = @"C:\Users\Meu Computador\Desktop\Teste\ProjetoCadastro-Console\formulario.txt";
+
+            Console.Write("Digite o número da pergunta a ser removida: ");
+            int num = int.Parse(Console.ReadLine());
+
+            try
+            {
+                List<string> strings = File.ReadAllLines(path).ToList();
+
+                if(num > 4)
+                {
+                    strings.RemoveAt(num - 1);
+
+                    using (StreamWriter sw = new StreamWriter(path, true))
+                    {
+                        foreach (var obj in strings)
+                        {
+                            sw.WriteLine(obj);
+                        }
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine("Não possível deletar as primeiras 4 perguntas");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred");
+                Console.WriteLine(ex.Message);
             }
             Console.WriteLine();
         }

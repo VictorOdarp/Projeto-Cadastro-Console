@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "9JTol3BkZCq6XE5fhP9UQh5y1wNPfk0/EPH4LYcP5jOPt4NcYbhabl9XWrXGMM84HXEY1btuJ6CkZ8KCtjRMaA==",
+  "dgSpecHash": "trOsu13BwXP++1dkRc3flAlGdxCWZEJkSXKblV1WgatiYXeeNaLAjd+Cqkqr4u6DIk+sh0QG8bQA8rXKGRgTCw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Victo\\Desktop\\Projeto Cadastro\\ProjetoCadastro\\ProjetoCadastro\\ProjetoCadastro.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Meu Computador\\Desktop\\Teste\\ProjetoCadastro-Console\\ProjetoCadastro\\ProjetoCadastro\\ProjetoCadastro.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Meu Computador\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Meu Computador\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Meu Computador\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Meu Computador\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
+  ],
   "logs": []
 }

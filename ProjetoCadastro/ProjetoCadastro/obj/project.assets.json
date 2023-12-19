@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Victo\\.nuget\\packages\\": {}
+    "C:\\Users\\Meu Computador\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Victo\\Desktop\\Projeto Cadastro\\ProjetoCadastro\\ProjetoCadastro\\ProjetoCadastro.csproj",
+      "projectUniqueName": "C:\\Users\\Meu Computador\\Desktop\\Teste\\ProjetoCadastro-Console\\ProjetoCadastro\\ProjetoCadastro\\ProjetoCadastro.csproj",
       "projectName": "ProjetoCadastro",
-      "projectPath": "C:\\Users\\Victo\\Desktop\\Projeto Cadastro\\ProjetoCadastro\\ProjetoCadastro\\ProjetoCadastro.csproj",
-      "packagesPath": "C:\\Users\\Victo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Victo\\Desktop\\Projeto Cadastro\\ProjetoCadastro\\ProjetoCadastro\\obj\\",
+      "projectPath": "C:\\Users\\Meu Computador\\Desktop\\Teste\\ProjetoCadastro-Console\\ProjetoCadastro\\ProjetoCadastro\\ProjetoCadastro.csproj",
+      "packagesPath": "C:\\Users\\Meu Computador\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Meu Computador\\Desktop\\Teste\\ProjetoCadastro-Console\\ProjetoCadastro\\ProjetoCadastro\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Victo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Meu Computador\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -56,12 +56,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
