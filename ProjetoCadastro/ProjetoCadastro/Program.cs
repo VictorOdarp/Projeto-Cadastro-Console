@@ -9,10 +9,13 @@ namespace ProjetoCadastro
     {
         static void Main(string[] args)
         {
-
-            string path = @"C:\Users\Victo\Desktop\Projeto Cadastro\Formulario.txt";
             User user = new User();
             List<User> list = new List<User>();
+
+            Console.WriteLine("Perguntas iniciais!");
+            Console.WriteLine();
+
+            string path = @"C:\Users\Victo\Desktop\Projeto Cadastro\Formulario.txt";
 
             try
             {
@@ -31,46 +34,41 @@ namespace ProjetoCadastro
                 Console.WriteLine(ex.Message);
             }
 
-            CadastrarUsuario();
+            Console.WriteLine();
+            Inicio(list, user);
 
-            void CadastrarUsuario()
+            static void Inicio(List<User> list, User user)
             {
-                int count = list.Count; 
-                
 
-                Console.Write("Name: ");
-                string name = Console.ReadLine();
-                Console.Write("Email: ");
-                string email = Console.ReadLine();
-                Console.Write("Year: ");
-                int year = int.Parse(Console.ReadLine());
-                Console.Write("Height: ");
-                double height = double.Parse(Console.ReadLine());
-                User user = new User(name, email, year, height);
-                list.Add(user);
+                Console.WriteLine("1 - Cadastrar o usuário");
+                Console.WriteLine("2 - Listar todos os usuários cadastrados");
+                Console.WriteLine("3 - Cadastrar nova pergunta no formulário");
+                Console.WriteLine("4 - Deletar perguntado formulário");
+                Console.WriteLine("5 - Pesquisar usuário por nome, idade ou email");
 
-                string targetPath = (@"C:\Users\Victo\Desktop\Projeto Cadastro\" + (count + 1) + "-" + user.Name + ".txt");
+                Console.Write("Digite a sua opçao: ");
+                int validação = int.Parse(Console.ReadLine());
+                Console.WriteLine();
 
-                try
+
+                if (validação == 1)
                 {
-                    using (StreamWriter sw = new StreamWriter(targetPath))
-                    {
-                        sw.WriteLine("Name: " + user.Name);
-                        sw.WriteLine("Email: " + user.Email);
-                        sw.WriteLine("Year: " + user.Year);
-                        sw.WriteLine("Heigh: " + user.Height);
-                        Console.WriteLine("Usuário cadastrado com sucesso!");
-                    }
-
+                    user.CadastrarUsuario(list);
+                    Inicio(list, user);
                 }
-                catch (Exception ex)
+                if (validação == 2)
                 {
-                    Console.WriteLine("An error occurred");
-                    Console.WriteLine(ex.Message);
+                    user.ListarUsuárioName(list);
+                    Inicio(list,user);
                 }
             }
 
-            CadastrarUsuario();
+          
+            
+           
+            
+
+            
 
 
 
