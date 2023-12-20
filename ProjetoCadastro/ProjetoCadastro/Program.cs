@@ -35,9 +35,9 @@ namespace ProjetoCadastro
             }
 
             Console.WriteLine();
-            Inicio(list, user);
+            Inicio(list, user, path);
 
-            static void Inicio(List<User> list, User user)
+            static void Inicio(List<User> list, User user, string path)
             {
 
                 Console.WriteLine("1 - Cadastrar o usuário");
@@ -50,16 +50,30 @@ namespace ProjetoCadastro
                 int validação = int.Parse(Console.ReadLine());
                 Console.WriteLine();
 
-
                 if (validação == 1)
                 {
                     user.CadastrarUsuario(list);
-                    Inicio(list, user);
+                    Inicio(list, user, path);
                 }
                 if (validação == 2)
                 {
                     user.ListarUsuárioName(list);
-                    Inicio(list,user);
+                    Inicio(list,user, path);
+                }
+                if (validação == 3)
+                {
+                    user.AdicionarPergunta(path);
+                    Inicio(list,user, path);
+                }
+                if (validação == 4)
+                {
+                    user.RemoverPergunta(path);
+                    Inicio(list,user, path);
+                }
+                if (validação == 5)
+                {
+                    user.PesquisarUsuario(list,user);
+                    Inicio(list,user, path);
                 }
             }
 

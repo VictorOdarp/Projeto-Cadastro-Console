@@ -1,6 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics;
-using System.Globalization;
+﻿using System.Globalization;
+using System.Numerics;
 
 namespace ProjetoCadastro.Entities
 {
@@ -79,5 +78,73 @@ namespace ProjetoCadastro.Entities
             }
             Console.WriteLine();
         }
+
+        public void AdicionarPergunta(string path)
+        {
+            string numero = null;
+
+            Console.Write("Digite sua pergunta a ser adicionada: ");
+            string pergunta = Console.ReadLine();
+
+            try
+            {
+                string[] lines = File.ReadAllLines(path);
+
+                using (StreamWriter sw = new StreamWriter(path, true))
+                {
+                    sw.WriteLine((lines.Count() + 1) + " - " + pergunta);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred");
+                Console.WriteLine(ex.Message);
+            }
+            Console.WriteLine();
+        }
+
+        public void RemoverPergunta(string path)
+        {
+
+            Console.Write("Digite o número da pergunta a ser removida: ");
+            int num = int.Parse(Console.ReadLine());
+
+            try
+            {
+                List<string> strings = File.ReadAllLines(path).ToList();
+
+                if(num > 4)
+                {
+                    strings.RemoveAt(num - 1);
+                    File.WriteAllLines(path, strings);
+                }
+                else
+                {
+                    Console.WriteLine("Não é possível deletar as primeiras 4 perguntas");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred");
+                Console.WriteLine(ex.Message);
+            }
+            Console.WriteLine();
+        }
+        public void PesquisarUsuario(List<User> list, User user)
+        {
+            Console.WriteLine("Digite a informação do usuário: ");
+            string usuário = Console.ReadLine();
+
+            var result = list.Where(x => x.Name.Contains(usuário)).ToList();
+
+            foreach (User item in result)
+            {
+                Console.WriteLine(item.Name + " - " + item.Email + " - " + item.Year + " - " + item.Height.ToString(CultureInfo.InvariantCulture));
+            }
+            
+
+
+        }
+
     }
 }
