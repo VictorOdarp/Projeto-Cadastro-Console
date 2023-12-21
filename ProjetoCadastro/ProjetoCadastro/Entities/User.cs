@@ -30,8 +30,22 @@ namespace ProjetoCadastro.Entities
 
             Console.Write("Name: ");
             string name = Console.ReadLine();
+            while (name.Length < 10)
+            {
+                
+                Console.WriteLine("Seu nome deve ter no minímo 10 caracteres!");
+                Console.Write("Name: ");
+                name = Console.ReadLine();
+            }
             Console.Write("Email: ");
             string email = Console.ReadLine();
+            while (!email.Contains("@") || list.Any(x => x.Email == email))
+            {
+                Console.WriteLine("Seu email precisa ser válido ou já é existente");
+                Console.Write("Email: ");
+                email = Console.ReadLine();
+
+            }
             Console.Write("Year: ");
             int year = int.Parse(Console.ReadLine());
             Console.Write("Height: ");
@@ -141,9 +155,8 @@ namespace ProjetoCadastro.Entities
             {
                 Console.WriteLine(item.Name + " - " + item.Email + " - " + item.Year + " - " + item.Height.ToString(CultureInfo.InvariantCulture));
             }
-            
-
-
+            Console.WriteLine();
+           
         }
 
     }
