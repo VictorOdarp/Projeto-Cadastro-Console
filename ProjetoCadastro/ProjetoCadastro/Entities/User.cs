@@ -23,6 +23,33 @@ namespace ProjetoCadastro.Entities
             Height = height;
         }
 
+        public void Inicio(string path)
+        {
+            Console.WriteLine("Perguntas iniciais!");
+            Console.WriteLine();
+
+            path = @"C:\Users\Victo\Desktop\Projeto Cadastro\Formulario.txt";
+
+            try
+            {
+                using (StreamReader sr = File.OpenText(path))
+                {
+                    while (!sr.EndOfStream)
+                    {
+                        string line = sr.ReadLine();
+                        Console.WriteLine(line);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred");
+                Console.WriteLine(ex.Message);
+            }
+
+            Console.WriteLine();
+        }
+
         public void CadastrarUsuario(List<User> list)
         {
             int count = list.Count + 1;
@@ -53,7 +80,7 @@ namespace ProjetoCadastro.Entities
             User user = new User(name, email, year, height);
             list.Add(user);
 
-            string targetPath = (@"C:\Users\Victo\Desktop\Projeto Cadastro\Usuarios\" + count + "-" + user.Name + ".txt");
+            string targetPath = (@"C:\Users\Victo\Desktop\Projeto Cadastro\Usuarios\" + count + "-" + user.Name.ToUpper().Replace(" ", "") + ".txt");
 
             try
             {
